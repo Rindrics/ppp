@@ -1,10 +1,14 @@
 import random
 
-options = ['rock', 'paper', 'scissors']
+OPTIONS = ['rock', 'paper', 'scissors']
+
+def get_computer_choice():
+    return random.choice(OPTIONS)
+
 print ('(1) Rock\n(2) Paper\n(3) Scissors')
-human_choice = options[int(input('Enter the number of your coice: ')) - 1]
+human_choice = OPTIONS[int(input('Enter the number of your coice: ')) - 1]
 print(f'You chose {human_choice}')
-computer_choice = random.choice(options)
+computer_choice = get_computer_choice()
 print (f'The computer chose {computer_choice}')
 if human_choice == 'rock':
     if computer_choice == 'paper':
