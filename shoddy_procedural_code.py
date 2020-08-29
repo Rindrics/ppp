@@ -10,7 +10,7 @@ def get_human_choice():
     return OPTIONS[choice_number - 1]
 
 def print_options():
-    print('\n'.join(f'({i}) {option.title()}' for i,
+    print('\n'.join(f'({i + 1}) {option.title()}' for i,
                     option in enumerate(OPTIONS)))
 
 def print_choices(human_choice, computer_choice):
