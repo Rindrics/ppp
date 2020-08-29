@@ -13,11 +13,14 @@ def print_options():
     print('\n'.join(f'({i}) {option.title()}' for i,
                     option in enumerate(OPTIONS)))
 
+def print_choices(human_choice, computer_choice):
+  print(f'You chose {human_choice}')
+  print(f'The computer chose {computer_choice}')
+
 print_options()
 human_choice = get_human_choice()
-print(f'You chose {human_choice}')
 computer_choice = get_computer_choice()
-print(f'The computer chose {computer_choice}')
+print_choices(human_choice, computer_choice)
 if human_choice == 'rock':
     if computer_choice == 'paper':
         print('Sorry, paper beat rock')
