@@ -5,8 +5,12 @@ OPTIONS = ['rock', 'paper', 'scissors']
 def get_computer_choice():
     return random.choice(OPTIONS)
 
+def get_human_choice():
+    choice_number = int(input('Enter the number of your choice: '))
+    return OPTIONS[choice_number - 1]
+
 print ('(1) Rock\n(2) Paper\n(3) Scissors')
-human_choice = OPTIONS[int(input('Enter the number of your coice: ')) - 1]
+human_choice = get_human_choice()
 print(f'You chose {human_choice}')
 computer_choice = get_computer_choice()
 print (f'The computer chose {computer_choice}')
