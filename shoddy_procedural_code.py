@@ -9,11 +9,15 @@ def get_human_choice():
     choice_number = int(input('Enter the number of your choice: '))
     return OPTIONS[choice_number - 1]
 
-print ('(1) Rock\n(2) Paper\n(3) Scissors')
+def print_options():
+    print('\n'.join(f'({i}) {option.title()}' for i,
+                    option in enumerate(OPTIONS)))
+
+print_options()
 human_choice = get_human_choice()
 print(f'You chose {human_choice}')
 computer_choice = get_computer_choice()
-print (f'The computer chose {computer_choice}')
+print(f'The computer chose {computer_choice}')
 if human_choice == 'rock':
     if computer_choice == 'paper':
         print('Sorry, paper beat rock')
