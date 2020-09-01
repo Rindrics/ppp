@@ -8,7 +8,7 @@ class Greeter:
         return datetime.now().strftime('%A')
     
     def _part_of_day(self):
-        time = some_time()
+        current_hour = datetime.now().hour
         if time < 12:
             return "morning"
         elif time >= 12 | time < 17:
