@@ -5,7 +5,7 @@ class Greeter:
         self.name = name
         
     def _day(self):
-        return date
+        return datetime.now().strftime('%A')
     
     def _part_of_day(self):
         time = some_time()
