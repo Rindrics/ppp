@@ -9,12 +9,12 @@ class Greeter:
     
     def _part_of_day(self):
         current_hour = datetime.now().hour
-        if time < 12:
-            return "morning"
-        elif time >= 12 | time < 17:
-            return "afternoon"
+        if current_hour < 12:
+            part_of_day "morning"
+        elif 12 <= current_hour < 17:
+            part_of_day "afternoon"
         else:
-            return "evening"
+            part_of_day "evening"
         
     def greet(self, store):
         day         = self._day()
