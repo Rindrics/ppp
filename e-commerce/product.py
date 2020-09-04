@@ -5,6 +5,7 @@ class Product:
         self.color = color
 
     def transform_name_for_sku(self):
+        self.name = self.name.replace(' ', '')
         return self.name.upper()
 
     def transform_color_for_sku(self):

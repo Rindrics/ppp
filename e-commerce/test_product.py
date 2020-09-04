@@ -8,6 +8,10 @@ class ProductTestCase(unittest.TestCase):
         self.assertEqual('SHOES',
                          small_black_shoes.transform_name_for_sku()
         )
+        small_pink_tank_top = Product('tank top', 'S', 'pink')
+        self.assertEqual('TANKTOP',
+                         small_pink_tank_top.transform_name_for_sku()
+        )
 
     def test_transform_color_for_sku(self):
         small_black_shoes = Product('shoes', 'S', 'black')
